@@ -96,8 +96,8 @@ int main()
 		window->clear(sf::Color(100.0f, 100.0f, 100.0f));
 
 		sf::Vector2f mouseWorldPosition = window->mapPixelToCoords(sf::Mouse::getPosition(*window));
-		bool asd = sf::Mouse::isButtonPressed(sf::Mouse::Left);
-		AsmUpdate(deltaTime, mouseWorldPosition.x, mouseWorldPosition.y, asd);
+		bool clickState = sf::Mouse::isButtonPressed(sf::Mouse::Left);
+		AsmUpdate(deltaTime, mouseWorldPosition.x, mouseWorldPosition.y, clickState);
 
 		for (int i = 0; i < boidCount; i++)
 		{
